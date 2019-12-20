@@ -1,4 +1,3 @@
-
 import Home from '../screens/Home';
 import Calendar from '../screens/Calendar';
 import Search from '../screens/Search';
