@@ -11,7 +11,7 @@ export default props =>
         </View>
         <View>
             <Icon name='user-md' size={65} style={styles.userIcon} />
-            <Text style={styles.userName}>Guilherme Mattos</Text>
+            <Text style={styles.userName}>{props.userName}</Text>
         </View>
     </View>
 

@@ -7,7 +7,7 @@ import MenuHeader from '../../components/MenuHeader'
 const Home = ({ navigation }) => (
 	<View>
 		<View>
-			<MenuHeader style={styles.header}/>
+			<MenuHeader style={styles.header} userName='Guilherme Mattos'/>
 		</View>
 		<View style={styles.itens}>
 			<MenuItem menuIcon='users' textMenu='Ver Pacientes' />
