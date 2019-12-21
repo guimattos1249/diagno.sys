@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Button, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import MenuItem from '../../components/MenuItem'
 import MenuHeader from '../../components/MenuHeader'
@@ -9,11 +9,22 @@ const Home = ({ navigation }) => (
 		<View>
 			<MenuHeader style={styles.header} userName='Guilherme Mattos'/>
 		</View>
-		<View style={styles.itens}>
-			<MenuItem menuIcon='users' textMenu='Ver Pacientes' />
-			<MenuItem menuIcon='clipboard' textMenu='Cardápios' /> 
-			<MenuItem menuIcon='file-text' textMenu='Consultas' />   
-			<MenuItem menuIcon='calendar' textMenu='Agenda' />  
+		<View style={styles.itens} >
+			<TouchableOpacity onPress={() => navigation.navigate('Search')}>
+				<MenuItem menuIcon='users' textMenu='Ver Pacientes' />
+			</TouchableOpacity>
+
+			<TouchableOpacity onPress={() => navigation.navigate('Calendar')}>
+				<MenuItem menuIcon='clipboard' textMenu='Cardápios' /> 
+			</TouchableOpacity>
+
+			<TouchableOpacity onPress={() => navigation.navigate('Search')}>
+				<MenuItem menuIcon='file-text' textMenu='Consultas' />   
+			</TouchableOpacity>
+
+			<TouchableOpacity onPress={() => navigation.navigate('Search')}>
+				<MenuItem menuIcon='calendar' textMenu='Agenda' />
+			</TouchableOpacity>
 		</View>
 	</View>
 );
@@ -29,6 +40,7 @@ const styles = StyleSheet.create({
 	itens: {
 		display: 'flex',
 		flexDirection: 'row',
+		flexWrap: 'wrap',
 	}
 })
 

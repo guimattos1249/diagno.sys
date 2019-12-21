@@ -1,12 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
 export default props =>
-        <View style={styles.menuItem}>
-            <Icon name={props.menuIcon} size={30} style={styles.menuIcon} />
-            <Text style={styles.menuText}>{props.textMenu}</Text>
-        </View>
+    <View style={styles.menuItem}>
+        <Icon name={props.menuIcon} size={30} style={styles.menuIcon} />
+        <Text style={styles.menuText}>{props.textMenu}</Text>
+    </View>
 
 const styles = StyleSheet.create({
     menuItem: {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import logoWhite from '../../assets/logo-white_transparent.png'
+import logoWhite from '../../assets/logo-white-puro.png'
 
 export default props =>
     <View style={styles.container}>
@@ -29,20 +29,21 @@ const styles = StyleSheet.create({
     },
     logo: {
         display: 'flex',
-        width: 250,
-        height: 50,
+        width: 200,
+        height: 100,
     },
     userIcon: {
         color: '#FFF',
         display: 'flex',
         alignItems: 'flex-start',
-        marginLeft: 10,
+        marginLeft: 20,
+        marginBottom: 6,
     },
     userName: {
         color: '#FFF',
         fontFamily: 'Verdana',
         fontSize: 20,
-        marginLeft: 10,
+        marginLeft: 20,
     }
 
 })
