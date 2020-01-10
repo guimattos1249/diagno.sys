@@ -1,17 +1,19 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, TextInput, StyleSheet, TouchableOpacity, Text} from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
+import SearchHeader from '../../components/SearchHeader'
+import SearchItem from '../../components/SearchItem'
 
 const Search = () => (
-  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    <Text>Search</Text>
-  </View>
+    <View>
+        <SearchHeader/>
+        <SearchItem/>
+    </View>
 );
 
 Search.navigationOptions = {
-  title: 'Patients',
-  tabBarIcon: <Icon name="list" size={18} color="#599924" />
+    title: 'Patients',
+    tabBarIcon: <Icon name="list" size={18} color="#599924" />
 }
-
 
 export default Search;
