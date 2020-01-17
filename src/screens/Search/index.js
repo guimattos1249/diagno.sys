@@ -1,15 +1,31 @@
 import React from 'react';
 import { View, TextInput, StyleSheet, TouchableOpacity, Text} from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
-import SearchHeader from '../../components/SearchHeader'
-import SearchItem from '../../components/SearchItem'
+import SearchHeader from '../../components/SearchHeader';
+import SearchItem from '../../components/SearchItem';
 
-const Search = () => (
+const Search = ({ navigation }) => (
     <View>
-        <SearchHeader/>
-        <SearchItem/>
+        <View>
+            <SearchHeader/>
+        </View>
+        <View style={styles.itens}>
+            <TouchableOpacity onPress={() => navigation.navigate('')}>
+                <SearchItem/>
+		    </TouchableOpacity>
+        </View>
     </View>
 );
+
+const styles = StyleSheet.create({
+	itens: {
+		display: 'flex',
+		flexDirection: 'row',
+        flexWrap: 'wrap',
+        alignItems: 'center',
+        justifyContent: 'center',
+	}
+})
 
 Search.navigationOptions = {
     title: 'Patients',
